@@ -232,6 +232,7 @@ body {
   display: flex;
   flex: 1;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .about__info {
@@ -447,6 +448,7 @@ body {
   display: flex;
   gap: 30px;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .barbers__subtitle {
@@ -545,6 +547,7 @@ body {
   display: flex;
   gap: 30px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .place__subtitle {
@@ -641,7 +644,7 @@ body {
 .footer {
   display: flex;
   justify-content: space-between;
-  width: 1200px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 56px;
@@ -667,7 +670,8 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -854,4 +858,72 @@ body {
 
 .active {
   background-color: #2196f3;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 32px;
+  }
+
+  /* Hero section responsive */
+
+  .hero-section__title {
+    font-size: 48px;
+  }
+
+  /* About section responsive */
+  .about .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about__images {
+    order: 1;
+    justify-content: center;
+  }
+
+  .about__subtitle::before {
+    display: none;
+  }
+
+  .service__container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Statistics section responsive */
+
+  .statistics .container {
+    flex-direction: column;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .statistics__list {
+    order: 1;
+  }
+
+  /* Barbers section responsive */
+  .barbers__container {
+    justify-content: center;
+  }
+
+  /* Places section responsive */
+  .place__images {
+    justify-content: center;
+  }
+
+  /* Contact section responsive */
+  .contact {
+    flex-direction: column;
+  }
+  .contact__info {
+    padding-left: 50px;
+  }
+
+  .contanct__form {
+    display: none;
+  }
 }
